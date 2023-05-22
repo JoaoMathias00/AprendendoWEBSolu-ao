@@ -1,0 +1,76 @@
+﻿<body>
+    <form action="/home/salvar">
+            <div class="main">
+        <div class="input">
+            <p>digite o nome do produto</p>
+            <input class="box" type="text" name="Nome" size="30" />
+        </div>
+        <div class ="input">
+            <p>Selecione a imagem do produto</p>
+            <input class="box" type="text" name="img" size="30" />
+        </div>
+        <div class="input">
+            <p>Adicione uma breve descriçao do produto</p>
+            <input class="box" type="text" name="descricao" size="30" />
+        </div>
+        <div class="input">
+            <p>digite o preço do produto</p>
+            <input class="box" type="number" name="preco" size="30" />
+        </div>
+        
+        <button class="botao">Adicionar</button>
+        
+
+
+        </div>
+    </form>
+
+
+</body>
+
+<style>
+    .main {
+        
+        width: 700px;
+        height: 600px;
+        background-color: darkgrey;
+        align-items:center;;
+        display:flex;
+        flex-direction:column;
+
+    }
+
+    .input{
+        width: 200px;
+        height: 100px;
+        flex-direction:column;
+        border-radius:10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        align-items: center;
+        background-color: #DCDCDC;
+    }
+
+    .box{
+        width:160px;
+        height:25px;    
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.1);
+        
+    }
+
+    .p{
+        flex-direction:column;
+        text-align:center;
+
+    
+    }
+    .botao{
+        width:120px;
+        height:50px;
+        background-color:chocolate;
+        box-shadow: rgba(0, 0, 0, 0.1);
+
+    }
+
+
+</style>

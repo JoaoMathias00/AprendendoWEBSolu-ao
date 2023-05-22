@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+@{
+    List<Produto> itens = ViewBag.novo;
+}
+<head>
+    <title>Card de Produto</title>
+    <link href="~/css/estiloprodutos.css" rel="stylesheet" />
+</head>
+
+<body class="teste">
+    <div class="topo">
+        <h1>Produtos disponíveis</h1>
+    </div>
+
+    <div class="main2">
+        <div class="main">
+            @foreach (var item in itens)
+            {
+                <div class="card">
+                    <div class="produto-info">
+                        <h2>@item.nome</h2>
+                        <img src="~/@item.img" alt="Produto X">
+                        <p>@item.descricao</p>
+                        <button class="btn-excluir" onclick="excluirProduto(@item.id)">Excluir</button>
+                    </div>
+                    <button class="btn-preco">@item.preco</button>
+                </div>
+            }
+        </div>
+    </div>
+
+    <script>
+        function excluirProduto(id) {
+            if (confirm('Tem certeza de que deseja excluir este produto?')) {
+                window.location.href = '/Home/Deletar?id=' + id;
+            }
+        }
+    </script>
+</body>
+
+
+
+
+@*<!DOCTYPE html>
+@{
+	List<Produto> itens = ViewBag.novo;
+}
+<head>
+	<title>Card de Produto</title>
+	<link href="~/css/estiloprodutos.css" rel="stylesheet" />
+</head>
+
+<body class="teste">
+	<div class="topo">
+		<h1>Produtos disponíveis</h1>
+	</div>
+
+	<div class="main2">
+		<div class="main">
+			@foreach (var item in itens)
+			{
+				<div class="card">
+					<h2>@item.nome</h2>
+					<img src="~/@item.img" alt="Produto X">
+					<p>@item.descricao</p>
+					<button>@item.preco</button>
+				
+				</div>
+			}
+		</div>
+	</div>
+
+	
+*@
